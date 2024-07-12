@@ -6,13 +6,13 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('../assets/background.png');
 $background-opacity: 0.3;
-
+$logo-image: url('../assets/logo.jpg');
 
 
 // Functions
 
 @mixin easeOut {
-    transition: all 1s ease-out;
+    transition: all 0.75s ease-out;
 }
 
 @mixin background {

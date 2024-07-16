@@ -3,6 +3,7 @@
 // Loading other files
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 // Styles
 * {
@@ -54,7 +55,7 @@ main {
     padding: 4rem;
     height: 100%;
 
-    .icons {
+    .icons {      // socials icons
         margin-top: 1rem;
 
         a {

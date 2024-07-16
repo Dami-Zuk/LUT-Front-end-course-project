@@ -6,7 +6,7 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('../assets/background.png');
 $background-opacity: 0.3;
-$logo-image: url('../assets/logo.jpg');
+$logo-image: url('../assets/logo.png');
 
 
 // Functions
@@ -35,3 +35,34 @@ $logo-image: url('../assets/logo.jpg');
         }
     }
 }
+
+// Media query mixins - responsiveness
+
+// Small screens
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;       // automatically adds content to the mixin from diff source when called
+    }
+}
+
+// Medium screens
+@mixin mediaMd {
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+// Large screens
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+// XL screens
+@mixin mediaXL {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+

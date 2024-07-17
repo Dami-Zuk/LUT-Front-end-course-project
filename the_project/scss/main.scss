@@ -13,7 +13,7 @@
 body {
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -76,3 +76,25 @@ main {
     }
 }
 
+// About Us Grid and styles
+// Grid creation
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bio-logo bio bio';
+    grid-template-rows: repeat(3, 1fr);
+}
+
+// Styling of each individual part
+.bio-logo {
+    grid-area: bio-logo;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}

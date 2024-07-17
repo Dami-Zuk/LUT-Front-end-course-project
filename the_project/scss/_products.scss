@@ -1,0 +1,32 @@
+.products {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bio-logo desc desc' // Logo + gneral short desc of our products
+    'product-1'     // Products row by row, image + desc
+    'product-2' 
+    'product-3' 
+    'product-4' 
+    'product-5';
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.product-1 {
+    grid-area: product-1;
+}
+
+.product-2 {
+    grid-area: product-2;
+}
+
+.product-3 {
+    grid-area: product-3;
+}
+
+.product-4 {
+    grid-area: product-4;
+}
+
+.product-5 {
+    grid-area: product-5;
+}

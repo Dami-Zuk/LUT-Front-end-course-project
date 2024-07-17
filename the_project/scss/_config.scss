@@ -1,7 +1,7 @@
 // To run sass: npm run sass
 // Variables
 
-$primary-color: #444;
+$primary-color: #555;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('../assets/background.png');
@@ -36,32 +36,42 @@ $logo-image: url('../assets/logo.png');
     }
 }
 
+// Setting text color 
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
 // Media query mixins - responsiveness
 
 // Small screens
 @mixin mediaSm {
-    @media screen and (max-width: 500px) {
+    @media (max-width: 500px) {
         @content;       // automatically adds content to the mixin from diff source when called
     }
 }
 
 // Medium screens
 @mixin mediaMd {
-    @media screen and (min-width: 501px) and (max-width: 768px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
 
 // Large screens
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @media (max-width: 1170px) {
         @content;
     }
 }
 
 // XL screens
 @mixin mediaXL {
-    @media screen and (min-width: 1171px) {
+    @media (min-width: 1171px) {
         @content;
     }
 }

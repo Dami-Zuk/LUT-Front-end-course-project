@@ -92,36 +92,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1.1;
-      margin-bottom: 1rem; }
-  .menu .menu-nav,
-  .menu .menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    .menu .menu-nav.show,
-    .menu .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 28px; }
-  .menu .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu .menu-branding .logo {
-      height: 180px;
-      width: 180px; } }
-
-@media (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -170,14 +140,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.75s ease-out; }
+  height: calc(100vh - 60px); }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -187,14 +150,61 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bio-logo bio bio';
-  grid-template-rows: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-logo {
+    grid-area: bio-logo;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
 
-.bio-logo {
-  grid-area: bio-logo;
-  margin: auto;
-  border-radius: 50%;
-  border: #eece1a 3px solid; }
+#footer {
+  background: rgba(93, 93, 93, 0.6);
+  color: #fff;
+  height: 60px;
+  align-items: center; }
+  #footer .icons {
+    margin-left: 2rem; }
+    #footer .icons a {
+      padding: 0.4rem; }
+      #footer .icons a:hover {
+        color: #eece1a;
+        transition: all 0.75s ease-out; }
+  #footer .copyright {
+    text-align: right;
+    margin-right: 2rem; }
 
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem; }
+@media (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1.1;
+      margin-bottom: 1rem; }
+  .about-info {
+    grid-template-areas: 'bio-logo' 'bio';
+    grid-template-columns: 1fr; }
+  .menu .menu-nav,
+  .menu .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu .menu-nav.show,
+    .menu .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 28px; }
+  .menu .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu .menu-branding .logo {
+      height: 180px;
+      width: 180px; } }
+
+@media (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

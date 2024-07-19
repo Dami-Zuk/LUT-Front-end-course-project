@@ -21,6 +21,15 @@
         }
     }
 
+    // About Us mobile grid
+    .about-info {
+        grid-template-areas: 
+        'bio-logo'
+        'bio';
+
+        grid-template-columns: 1fr;
+    }
+
     .menu {
         // switching menu drop-down to be sideways
         .menu-nav,  

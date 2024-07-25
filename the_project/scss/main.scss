@@ -85,6 +85,35 @@ main {
     }
 }
 
+// Our Products Grid and styles
+// Grid creation
+.products {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'beer-pic beer-pic beer-pic'
+    'beer-info beer-info beer-info';
+
+    .beer-pic {
+        grid-area: beer-pic;
+        width: 35%;
+        max-height: 80%;
+        align-items: center;
+    }
+
+    .beer-info {
+        grid-area: beer-info;
+        align-items: center;
+    }
+
+    .product {
+        align-items: center;
+    }
+    }
+
+
+
 // Footer styling
 #footer {
     background: rgba(lighten($primary-color, 3), 0.6);

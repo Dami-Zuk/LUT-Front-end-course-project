@@ -160,6 +160,22 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
 
+.products {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'beer-pic beer-pic beer-pic' 'beer-info beer-info beer-info'; }
+  .products .beer-pic {
+    grid-area: beer-pic;
+    width: 35%;
+    max-height: 80%;
+    align-items: center; }
+  .products .beer-info {
+    grid-area: beer-info;
+    align-items: center; }
+  .products .product {
+    align-items: center; }
+
 #footer {
   background: rgba(93, 93, 93, 0.6);
   color: #fff;
@@ -186,6 +202,9 @@ main {
   .about-info {
     grid-template-areas: 'bio-logo' 'bio';
     grid-template-columns: 1fr; }
+    .about-info .bio-logo {
+      width: 200px;
+      height: 200px; }
   .menu .menu-nav,
   .menu .menu-branding {
     float: none;

@@ -26,9 +26,14 @@
         grid-template-areas: 
         'bio-logo'
         'bio';
-
         grid-template-columns: 1fr;
+
+        .bio-logo {
+            width: 200px;
+            height: 200px;
+        }
     }
+
 
     .menu {
         // switching menu drop-down to be sideways

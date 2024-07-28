@@ -1,32 +1,70 @@
 .products {
     display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    'bio-logo desc desc' // Logo + general short desc of our products
-    'product-1'     // Products row by row, image + desc
-    'product-2' 
-    'product-3' 
-    'product-4' 
-    'product-5';
-    grid-template-rows: repeat(3, 1fr);
-}
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
 
-.product-1 {
-    grid-area: product-1;
-}
+// Product card
+.card {
+    box-sizing: border-box;
+    display: flex;
+    margin: 20px 60px;
+    background: rgba(lighten($primary-color, 2), 0.6);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    
+        &:hover { 
+            box-shadow: 0 8px 17px 0 rgba(244, 244, 244, 0.2),0 6px 20px 0 rgba(244, 244, 244, 0.18);
+            @include easeOut;
+        }
+    
+        // Vertical line
+        hr {
+            width: 30x;
+            height: 100%;
+            margin: 0 auto;
+            color: #fff;
+            }
 
-.product-2 {
-    grid-area: product-2;
-}
+        .beer-photo {
+            padding: 30px;
+            width: 40%;
+            text-align: center;
 
-.product-3 {
-    grid-area: product-3;
-}
+                img { 
+                max-height: 280px;
+                }
+            }
+    
+        .description {
+            padding: 30px;
+            width: 60%;
+        
+        h2 {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 500;
+            }
+      
+        h4 { 
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px
+            }
 
-.product-4 {
-    grid-area: product-4;
-}
-
-.product-5 {
-    grid-area: product-5;
+        ul {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            }
+      
+        p { 
+            font-size: 16px; 
+            line-height: 20px;
+            padding: 10px 0;
+            margin: 0;
+            }     
+        }
+    }
 }

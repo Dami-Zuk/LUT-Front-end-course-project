@@ -1,11 +1,35 @@
 // Widescreens
 @include mediaXL {
-
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 25px;
+        column-gap: 25px;
+    }
 }
+
+
 
 // Desktops and laptops
 @include mediaLg {
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        column-gap: 25px;
+    }
 
+    .about-info {
+        grid-template-areas: 
+        'bio-logo'
+        'bio';
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+
+        .bio-logo {
+            width: 250px;
+            height: 250px;
+        }
+    }
 }
 
 // Tablets and small laptops
@@ -18,6 +42,9 @@
             line-height: 1.1;
             margin-bottom: 1rem;
 
+            .card {
+                width: 500px;
+            }
         }
     }
 
@@ -63,6 +90,16 @@
                 height: 180px;
                 width: 180px;
             }
+        }
+    }
+
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        column-gap: 25px;
+
+        .card {
+            margin: 10px 20px;
         }
     }
 }
